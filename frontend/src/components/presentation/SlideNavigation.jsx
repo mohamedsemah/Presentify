@@ -1,5 +1,5 @@
 import React from 'react';
-import { ChevronLeft, ChevronRight, X, Grid3X3 } from 'lucide-react';
+import { ChevronLeft, ChevronRight, X, Grid } from 'lucide-react';
 
 const SlideNavigation = ({
   currentSlide,
@@ -38,7 +38,7 @@ const SlideNavigation = ({
           onClick={onShowOverview}
           className="p-2 hover:bg-gray-700 rounded-full"
         >
-          <Grid3X3 size={20} />
+          <Grid size={20} />
         </button>
 
         <button

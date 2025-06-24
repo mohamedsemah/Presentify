@@ -37,7 +37,7 @@ class PresentationService:
                     slide_id=slide.id,
                     type=block_data['type'],
                     content=block_data.get('content', ''),
-                    metadata=block_data.get('metadata', {}),
+                    block_metadata=block_data.get('metadata', {}),  # Updated field name
                     position_x=block_data.get('position_x', 0),
                     position_y=block_data.get('position_y', j * 100),
                     width=block_data.get('width', 100),
@@ -85,7 +85,7 @@ class PresentationService:
                     'id': block.id,
                     'type': block.type,
                     'content': block.content,
-                    'metadata': block.metadata,
+                    'metadata': block.block_metadata,  # Map back to 'metadata' for API response
                     'position_x': block.position_x,
                     'position_y': block.position_y,
                     'width': block.width,

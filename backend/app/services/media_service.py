@@ -2,7 +2,7 @@ import os
 import uuid
 import aiofiles
 from PIL import Image
-from typing import Optional, Tuple
+from typing import Optional, Tuple, Dict
 from ..config import settings
 
 

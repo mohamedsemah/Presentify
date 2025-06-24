@@ -7,8 +7,11 @@ load_dotenv()
 
 
 class Settings(BaseSettings):
-    # Database
-    database_url: str = os.getenv("DATABASE_URL", "postgresql://user:password@localhost/edupresent")
+    # Database - Use SQLite as fallback for development
+    database_url: str = os.getenv(
+        "DATABASE_URL",
+        "sqlite:///./edupresent.db"  # SQLite fallback
+    )
 
     # API Keys
     openai_api_key: str = os.getenv("OPENAI_API_KEY", "")
@@ -36,3 +39,6 @@ class Settings(BaseSettings):
 
 
 settings = Settings()
+
+# Debug print (remove in production)
+print(f"Using database: {settings.database_url}")

@@ -10,7 +10,7 @@ class ContentBlock(Base):
     slide_id = Column(Integer, ForeignKey("slides.id"), nullable=False)
     type = Column(String(50), nullable=False)  # text, image, video, etc.
     content = Column(Text)
-    metadata = Column(JSON, default={})
+    block_metadata = Column(JSON, default={})  # Renamed from 'metadata' to 'block_metadata'
     position_x = Column(Float, default=0)
     position_y = Column(Float, default=0)
     width = Column(Float, default=100)
